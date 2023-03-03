@@ -1,0 +1,20 @@
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Angular Project-2</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/">Home</a>
+          </li>
+          <li ngbDropdown class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" role="button">Login</a>
+            <ul ngbDropdownMenu class="dropdown-menu">
+              <li><a ngbDropdownItem class="dropdown-item" routerLink="/admin-login">Admin Portal</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a ngbDropdownItem class="dropdown-item" routerLink="/user-login">User Portal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
