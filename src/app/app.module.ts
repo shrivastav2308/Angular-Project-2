@@ -12,6 +12,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeScreenComponent } from './home-screen/home-screen.component';
     HeaderComponent,
     RegisterUserComponent,
     LoadingSpinnerComponent,
-    HomeScreenComponent
+    HomeScreenComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
