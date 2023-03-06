@@ -8,19 +8,27 @@ import { LoginComponent } from './login/login.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserLoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterUserComponent,
+    LoadingSpinnerComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
@@ -7,30 +9,37 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit, OnDestroy {
+
+
   isAuthenticated = false;
   basicNavbar: any;
-  //private userSub: Subscription | undefined;
+  private userSub!: Subscription;
 
-  constructor(
+  constructor(private authService: AuthService
   ) {}
 
   ngOnInit() {
-    
+    this.userSub = this.authService.user.subscribe(user => {
+      this.isAuthenticated = !user ? false : true;
+      console.log(!user);
+      console.log(!!user);
+    });
   }
 
-  onSaveData() {
-    alert("Function works!")
-  }
+  // onSaveData() {
+  //   alert("Function works!")
+  // }
 
-  onFetchData() {
-    alert("Function works!!")
-  }
+  // onFetchData() {
+  //   alert("Function works!!")
+  // }
 
   onLogout() {
-    alert("Logout!!")
+    // alert("Logout!!");
+    this.authService.logout();
   }
 
   ngOnDestroy() {
-    //
+    this.userSub.unsubscribe();
   }
 }
