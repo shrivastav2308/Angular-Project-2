@@ -11,7 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { SettingsComponent } from './settings/settings.component';
+import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { SettingsComponent } from './settings/settings.component';
     HeaderComponent,
     RegisterUserComponent,
     LoadingSpinnerComponent,
-    SettingsComponent
+    HomeScreenComponent
   ],
   imports: [
     BrowserModule,

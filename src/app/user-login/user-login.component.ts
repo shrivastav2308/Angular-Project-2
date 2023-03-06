@@ -35,10 +35,12 @@ export class UserLoginComponent implements OnInit{
     authObs = this.authService.login(username, email, password, type);
     console.log(form.value);
     form.reset();
+    this.isLoading = true;
 
     authObs.subscribe(resData => {
       console.log(resData);
       this.isLoading = false;
+      this.router.navigate(['/home-screen']);
     },
     errorMsg => {
       console.log(errorMsg);

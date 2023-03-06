@@ -1,0 +1,40 @@
+table {
+    margin: auto;
+    margin-top: 5%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+  }
+  td, th {
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+    height: 50px;
+  }
+  #checkbox {
+    width: 50px;
+  }
+  #name {
+    width: 50px;
+  }
+  #quantity {
+    width: 50px;
+  }
+  #expdate {
+    width: 50px;
+  }
+  #actions {
+    width: 50px;
+  }
+
+  .search {
+    text-align: center;
+  }
+  input {
+    border-radius: 20px;
+  }
+  button {
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 20px;
+  }
