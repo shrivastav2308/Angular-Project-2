@@ -17,50 +17,24 @@
         </i>
       </button>
   </div>
-    <table>
-      <tr>
+  <button style="margin-left: 47.5%; margin-top: 50px;" id="getData" type="submit" (click)="getData()">
+    <i class="fa fa-refresh"
+            style="font-size: 18px;">
+        </i>
+  </button>
+  <button routerLink="/products-details">
+    <i class="fa fa-pencil"
+            style="font-size: 18px;">
+        </i>
+  </button>
+    <table id="products">
+      <tr >
         <th id="checkbox">Checkbox</th>
         <th id="name">Name</th>
         <th id="quantity">Quantity</th>
-        <th id="expdate">Expiry Date (DD/MM/YYYY)</th>
+        <th id="expdate">Expiry Date (YYYY-MM-DD)</th>
         <th id="desc">Description</th>
         <th id="tags">Tags</th>
         <th id="actions">Actions</th>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td><a routerLink="/products-details" style="text-decoration: none;">Product1</a></td>
-        <td>3</td>
-        <td>10/12/2023 </td>
-        <td></td>
-        <td></td>
-        <td><a href="/"><i class="fa fa-pencil" aria-hidden="true"></i></a> / <a href="/"><i class="fa fa-trash" aria-hidden="true" style="color: rgb(238, 43, 43);"></i></a></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td><a href="/" style="text-decoration: none;">Product2</a></td>
-        <td>1</td>
-        <td>05/11/2023</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td><a href="/" style="text-decoration: none;">Product3</a></td>
-        <td>2</td>
-        <td>01/02/2023</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td><a href="/" style="text-decoration: none;">Product4</a></td>
-        <td>4</td>
-        <td>25/05/2023</td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
     </table>

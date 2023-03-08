@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../auth.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   basicNavbar: any;
   private userSub!: Subscription;
 
-  constructor(private authService: AuthService
+  constructor(private authService: AuthService,
   ) {}
 
   ngOnInit() {

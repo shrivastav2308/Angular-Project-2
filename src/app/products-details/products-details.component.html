@@ -1,19 +1,28 @@
-<p>products-details works!</p>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
 
-<div class="container" style="width: 550px;">
+<div class="container" style="width: 700px;">
     <h1>Product Details</h1>
     <div class="actions" style="float: right;">
         <button class="edit" routerLink="/create-product"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         <button class="remove"><i class="fa fa-trash" aria-hidden="true"></i></button>
     </div>
+    <button style="margin-left: 45%; margin-top: 50px;" id="getData" type="submit" (click)="getData()">
+        <i class="fa fa-refresh"
+                style="font-size: 18px; background-color: deepskyblue;">
+            </i>
+      </button>
+      <br>
+      <br>
     <div class="content" style="border: 0.5px solid black;">
-        <h4>
-            Product Name : Product1 <br>
-            Quantity : <br>
-            Expiry Date (DD/MM/YYYY) : <br>
-            Description : <br>
-            Tags : <br>
-        </h4>
+        <table id="details">
+            <tr >
+              <th id="name">Name</th>
+              <th id="quantity">Quantity</th>
+              <th id="expdate">Expiry Date</th>
+              <th id="desc">Description</th>
+              <th id="tags">Tags</th>
+            </tr>
+          </table>
     </div>
 </div>

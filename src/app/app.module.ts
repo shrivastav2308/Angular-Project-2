@@ -41,7 +41,7 @@ import { CreateProductComponent } from './create-product/create-product.componen
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()), 
   ],
-  providers: [],
+  providers: [CreateProductComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

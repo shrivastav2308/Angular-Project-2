@@ -16,15 +16,20 @@ table {
   }
   #name {
     width: 50px;
+    justify-content: center;
   }
   #quantity {
     width: 50px;
+    justify-content: center;
   }
   #expdate {
-    width: 50px;
+    width: 150px;
   }
   #actions {
     width: 50px;
+  }
+  #tags {
+    width: 80px
   }
 
   .search {

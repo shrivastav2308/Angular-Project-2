@@ -7,44 +7,41 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card shadow-2-strong" style="border-radius: 1rem;">
-            <form #authForm="ngForm" (ngSubmit)="createProd()">
+            <form #createForm="ngForm" (ngSubmit)="createProd(createForm, this.createForm.value)">
               <div class="card-body p-5 text-center">
                 <h3 class="mb-5">Create Product</h3>
                 <div class="form-outline mb-4">
                   <label class="form-label">Product Name</label>
-                  <input type="text" class="form-control" required>
+                  <input type="text" class="form-control" name="pName" [(ngModel)]="pName" required>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Expiry Date</label>
-                  <input type="date" class="form-control" required>
+                  <input type="date" class="form-control" name="expiry" [(ngModel)]="expiry" required>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Quantity</label>
-                  <input type="number" class="form-control" required>
+                  <input type="number" class="form-control" name="quantity" [(ngModel)]="quantity" required>
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Heading</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="heading" [(ngModel)]="heading">
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Sub-heading</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="subheading" [(ngModel)]="subheading">
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Description</label>
-                  <textarea type="text" class="form-control" maxlength="250" style="height: 100px; overflow: visible;"></textarea>
+                  <textarea type="text" class="form-control" name="description" maxlength="250" style="height: 100px;" [(ngModel)]="description"></textarea>
                 </div>
                 <div>
-                  <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled] = "!authForm.valid" style="background-color: green; border: 0; margin-right: 5px;"><i class="fa fa-save" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled] = "!createForm.valid" style="background-color: green; border: 0; margin-right: 5px;"><i class="fa fa-save" aria-hidden="true"></i></button>
                   <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: red; border: 0;"><i class="fa fa-cancel" aria-hidden="true"></i></button>
                 </div>
                 <div>
                 </div>
               </div>
             </form>
-            <!-- <div *ngIf="isLoading" style="text-align: center;">
-                <app-loading-spinner></app-loading-spinner>
-              </div> -->
           </div>
         </div>
       </div>
