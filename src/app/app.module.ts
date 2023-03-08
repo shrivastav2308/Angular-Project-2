@@ -13,6 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { SettingsComponent } from './settings/settings.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { ProductsDetailsComponent } from './products-details/products-details.component';
+import { CreateProductComponent } from './create-product/create-product.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,18 @@ import { SettingsComponent } from './settings/settings.component';
     RegisterUserComponent,
     LoadingSpinnerComponent,
     HomeScreenComponent,
-    SettingsComponent
+    SettingsComponent,
+    ProductsDetailsComponent,
+    CreateProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule, 
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()), 
   ],
   providers: [],
   bootstrap: [AppComponent]

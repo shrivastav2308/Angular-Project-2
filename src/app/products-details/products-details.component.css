@@ -1,0 +1,20 @@
+*{
+    padding: 10px;
+}
+.container {
+    align-content: center;
+    margin-left: 33%;
+}
+div>button {
+    padding: 5px;
+    color: white;
+}
+.edit {
+    background-color: green;
+    border: 1px;
+}
+.remove {
+    background-color: red;
+    border: 1px;
+    margin-left: 5px;
+}

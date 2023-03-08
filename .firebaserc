@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-assignment2": {
+      "hosting": {
+        "Assignment-2": [
+          "ng-assignment2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-assignment2"
+  }
+}

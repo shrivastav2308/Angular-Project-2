@@ -12,7 +12,7 @@
             <div *ngIf="isLoading" style="text-align: center;">
               <app-loading-spinner></app-loading-spinner>
             </div>
-            <form #authForm="ngForm" (ngSubmit)="registerUser(authForm)"
+            <form #authForm="ngForm" (ngSubmit)="registerUser(authForm, authForm.value)"
             *ngIf="!isLoading">
               <div class="card-body p-5 text-center">
                 <h3 class="mb-5">Welcome to Registration Portal</h3>
@@ -30,11 +30,12 @@
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">Account Type</label>
-                  <select class="form-control" name="Account Type" id="accountType" required>
+                  <input type="accounttype" class="form-control" name="accounttype" [(ngModel)]="accounttype" required>
+                  <!-- <select class="form-control" name="Account Type" ngModel id="accountType" required>
                     <option value="">--Select--</option>
                     <option value="">Admin</option>
                     <option value="">User</option>
-                  </select>
+                  </select> -->
                 </div>
                 <div>
                   <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled] = "!authForm.valid">Register</button>
