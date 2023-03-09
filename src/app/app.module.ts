@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
 import { CreateProductComponent } from './create-product/create-product.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CreateProductComponent } from './create-product/create-product.componen
     HomeScreenComponent,
     SettingsComponent,
     ProductsDetailsComponent,
-    CreateProductComponent
+    CreateProductComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit{
   // public type: string = 'admin';
   isLoading = false;
   error!: string;
+  nameEmitter = new EventEmitter<string>();
   constructor(private router: Router,
     private authService: AuthService) {}
 
