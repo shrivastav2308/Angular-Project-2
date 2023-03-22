@@ -38,7 +38,7 @@
                 </thead>
                 <tbody *ngIf="!isFetching" class="text-center">
                     <tr *ngFor="let product of products; index as i">
-                        <th scope="row">{{i+1}}</th>
+                        <td><input type="checkbox"></td>
                         <td>{{product.id}}</td>
                         <td>{{product.name}}</td>
                         <td>{{product.quantity}}</td>
