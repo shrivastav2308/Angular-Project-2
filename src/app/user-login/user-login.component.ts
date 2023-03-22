@@ -40,7 +40,7 @@ export class UserLoginComponent implements OnInit{
     authObs.subscribe(resData => {
       console.log(resData);
       this.isLoading = false;
-      this.router.navigate(['/home-screen']);
+      this.router.navigate(['/products']);
     },
     errorMsg => {
       console.log(errorMsg);

@@ -11,16 +11,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
-import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { SettingsComponent } from './settings/settings.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { ProductsDetailsComponent } from './products-details/products-details.component';
-import { CreateProductComponent } from './create-product/create-product.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { ProductsService } from './products.service';
+import { ManageProductsComponent } from './manage-products/manage-products.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +29,11 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     HeaderComponent,
     RegisterUserComponent,
     LoadingSpinnerComponent,
-    HomeScreenComponent,
     SettingsComponent,
-    ProductsDetailsComponent,
-    CreateProductComponent,
     ErrorPageComponent,
     FilterPipe,
-    SideNavComponent
+    SideNavComponent,
+    ManageProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +44,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()), 
   ],
-  providers: [CreateProductComponent],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
