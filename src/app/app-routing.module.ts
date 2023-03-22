@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateProductComponent } from './create-product/create-product.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { HomeScreenComponent } from './home-screen/home-screen.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'home-screen', component: HomeScreenComponent},
   {path: 'settings', component: SettingsComponent},
   {path: 'products-details', component: ProductsDetailsComponent},
-  {path: 'create-product', component: CreateProductComponent}
+  {path: 'create-product', component: CreateProductComponent},
+  {path: 'error', component: ErrorPageComponent}
 ];
 
 @NgModule({

@@ -19,6 +19,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { ProductsDetailsComponent } from './products-details/products-details.component';
 import { CreateProductComponent } from './create-product/create-product.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     SettingsComponent,
     ProductsDetailsComponent,
     CreateProductComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    FilterPipe,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

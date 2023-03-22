@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, Input } from '@angular/core';
 import { Database, set, ref, update, push, child, onValue } from '@angular/fire/database';
 import * as $ from 'jquery';
 
@@ -12,18 +12,18 @@ import * as $ from 'jquery';
   styleUrls: ['./home-screen.component.css']
 })
 export class HomeScreenComponent {
+  filteredString: string = '';
+  products = [];
   constructor(public Database: Database){}
 
-
   getData(){
-
+    
       $('#products td').remove();
       var rowNum = 0; 
       const dbRef = ref(this.Database, 'createProduct/');
   
       onValue(dbRef, (snapshot) => {
         snapshot.forEach((childSnapshot) => {
-        //const childKey = childSnapshot.key;
         const childData = childSnapshot.val();
 
         rowNum += 1; 

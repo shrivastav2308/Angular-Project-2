@@ -36,7 +36,7 @@
                 </div>
                 <div>
                   <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled] = "!createForm.valid" style="background-color: green; border: 0; margin-right: 5px;"><i class="fa fa-save" aria-hidden="true"></i></button>
-                  <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: red; border: 0;"><i class="fa fa-cancel" aria-hidden="true"></i></button>
+                  <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: red; border: 0;"><i class="fa fa-cancel" aria-hidden="true" (click)="discard()"></i></button>
                 </div>
                 <div>
                 </div>

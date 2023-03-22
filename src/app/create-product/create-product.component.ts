@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Database, set, ref, update } from '@angular/fire/database';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-product',
@@ -8,8 +9,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./create-product.component.css']
 })
 export class CreateProductComponent {
+
   
-  constructor(public Database: Database) {}
+  constructor(public Database: Database,
+    private router: Router) {}
 
   public pName!: string;
   public expiry!: Date;
@@ -30,4 +33,8 @@ export class CreateProductComponent {
     console.log('database updated!');
     form.reset();
   }
+
+  discard() {
+    this.router.navigate(['/home-screen']);
+    }
 }

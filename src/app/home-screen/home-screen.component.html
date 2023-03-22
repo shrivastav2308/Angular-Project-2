@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
 
 <div class="search">
-    <input type="search">
+    <input type="text" [(ngModel)]="filteredString">
       <button>
         <i class="fa fa-search"
             style="font-size: 18px;">
@@ -27,8 +27,9 @@
             style="font-size: 18px;">
         </i>
   </button>
+  <div>
     <table id="products">
-      <tr >
+      <tr>
         <th id="checkbox">Checkbox</th>
         <th id="name">Name</th>
         <th id="quantity">Quantity</th>
@@ -38,3 +39,4 @@
         <th id="actions">Actions</th>
       </tr>
     </table>
+  </div>
