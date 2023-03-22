@@ -1,15 +1,15 @@
 
 
 .sidebar {
+    text-align: center;
     height: 100%;
-    width: auto;
+    width: 50px;
     position: fixed;
     background-color: #111;
-    /* padding-top: 16px; */
   }
   
   .sidebar a {
-    padding: 6px 8px 6px 16px;
+    padding: 6px 8px 6px 6px;
     text-decoration: none;
     font-size: 20px;
     color: #818181;
