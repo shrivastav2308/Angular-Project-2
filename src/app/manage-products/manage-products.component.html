@@ -28,6 +28,7 @@
                 <label for="tags">Tags</label>
                 <input type="text" class="form-control" id="tags" #tags>
             </div>
+            <br>
             <button type="button" class="btn btn-primary" (click)="addProduct(id, name, expiry, quantity, description, tags)">{{isEditMode ? 'Update Product' : 'Add Product'}}</button>
             <button type="button" class="btn btn-success mx-2" (click)="saveProduct()">Save Product</button>
             <!-- <button type="button" class="btn btn-warning" (click)="fetchProduct()">Fetch Product</button> -->
