@@ -42,6 +42,7 @@ saveProduct() {
     (response) => console.log(response),
     (err) => console.log(err)
   );
+  this.fetchProduct();
 }
 
 fetchProduct() {
@@ -97,7 +98,7 @@ onEditProduct(index: number) {
   this.quantity.nativeElement.value = this.products[index].quantity;
   this.description.nativeElement.value = this.products[index].description;
   this.tags.nativeElement.value = this.products[index].tags;
-  
+ 
 }
 
 onDeleteProduct(id: number) {
