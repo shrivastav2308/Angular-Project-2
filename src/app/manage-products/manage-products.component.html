@@ -37,12 +37,12 @@
     </div>
     <div class="col-md-6">
         <div class="form-group">
-            <input type="text" placeholder=" Search using Name or tags....." id="search" name="search" [(ngModel)]="nameSearch">
+            <input type="text" placeholder=" Search using Product Name....." id="search" name="search" [(ngModel)]="nameSearch" style="width: 100%;">
         </div>
         <br>
         <h2>{{dataTitle | async}}</h2>
         <table class="table">
-            <thead class="thead-dark">
+            <thead class="thead-dark text-center">
                 <tr>
                     <th scope="col"></th>
                     <th scope="col">ID</th>
@@ -58,7 +58,7 @@
             <tbody *ngIf="!isFetching" class="text-center">
                 <tr *ngFor="let product of products | filter: nameSearch ; index as i ">
                     <!-- <th scope="row">{{i+1}}</th> -->
-                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
                     <td>{{product.id}}</td>
                     <td>{{product.name}}</td>
                     <td>{{product.expiry}}</td>
