@@ -16,7 +16,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { FilterPipe } from './Pipes/filter.pipe';
+import { SearchPipe } from './Pipes/search.pipe';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ProductsService } from './products.service';
 import { ManageProductsComponent } from './manage-products/manage-products.component';
@@ -31,7 +31,7 @@ import { ManageProductsComponent } from './manage-products/manage-products.compo
     LoadingSpinnerComponent,
     SettingsComponent,
     ErrorPageComponent,
-    FilterPipe,
+    SearchPipe,
     SideNavComponent,
     ManageProductsComponent
   ],

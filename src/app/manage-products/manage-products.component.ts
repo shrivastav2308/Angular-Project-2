@@ -12,16 +12,23 @@ export class ManageProductsComponent implements OnInit {
 
   @ViewChild('id') id!: ElementRef;
   @ViewChild('name') name!: ElementRef;
+  @ViewChild('expiry') expiry!: ElementRef;
   @ViewChild('quantity') quantity!: ElementRef;
+  @ViewChild('description') description!: ElementRef;
+  @ViewChild('tags') tags!: ElementRef;
   isEditMode: boolean = false;
   editIndex!: number;
+  nameSearch: string = '';
   dataTitle = this._products.getDataTitle();
   isFetching = false;
   products =[
     {
       id: null,
       name: null,
-      quantity: null
+      expiry: null,
+      quantity: null,
+      description: null,
+      tags: null
     }
   ]
 
@@ -48,28 +55,34 @@ fetchProduct() {
   );
 }
 
-addProduct(id: { value: any; }, name: { value: any; }, quantity: { value: any; }) {
+addProduct(id: { value: any; }, name: { value: any; }, expiry: any, quantity: { value: any; }, description: { value: any; }, tags: any) {
   if(this.isEditMode) {
     this.products[this.editIndex] = {
       id: id.value,
       name: name.value,
-      quantity: quantity.value
+      expiry: expiry.value,
+      quantity: quantity.value,
+      description: description.value,
+      tags: tags.value
     }
     this.isEditMode = false;
     this.id.nativeElement.value = ''
     this.name.nativeElement.value = '';
+    this.expiry.nativeElement.value = '';
     this.quantity.nativeElement.value = '';
+    this.description.nativeElement.value = '';
+    this.tags.nativeElement.value = '';
     this.saveProduct();
   }
   else {
     this.products.push({
       id: id.value,
       name: name.value,
-      quantity: quantity.value
+      expiry: expiry.value,
+      quantity: quantity.value,
+      description: description.value,
+      tags: tags.value
     });
-    this.id.nativeElement.value = ''
-    this.name.nativeElement.value = '';
-    this.quantity.nativeElement.value = '';
     this.saveProduct();
   }
 }
@@ -80,7 +93,11 @@ onEditProduct(index: number) {
   console.log(this.products[index]);
   this.id.nativeElement.value = this.products[index].id;
   this.name.nativeElement.value = this.products[index].name;
+  this.expiry.nativeElement.value = this.products[index].expiry;
   this.quantity.nativeElement.value = this.products[index].quantity;
+  this.description.nativeElement.value = this.products[index].description;
+  this.tags.nativeElement.value = this.products[index].tags;
+  
 }
 
 onDeleteProduct(id: number) {
@@ -89,6 +106,4 @@ onDeleteProduct(id: number) {
     this.saveProduct();
   }
 }
-
-
 }
