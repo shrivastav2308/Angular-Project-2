@@ -44,7 +44,7 @@
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col"></th>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Expiry Date</th>
@@ -57,7 +57,8 @@
             </thead>
             <tbody *ngIf="!isFetching" class="text-center">
                 <tr *ngFor="let product of products | filter: nameSearch ; index as i ">
-                    <th scope="row">{{i+1}}</th>
+                    <!-- <th scope="row">{{i+1}}</th> -->
+                    <td><input type="checkbox" checked></td>
                     <td>{{product.id}}</td>
                     <td>{{product.name}}</td>
                     <td>{{product.expiry}}</td>
